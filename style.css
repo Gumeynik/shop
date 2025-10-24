@@ -125,8 +125,7 @@ body, ul {
   justify-content: center;
   padding-top: 75px;
   position: relative;
-  z-index: 2; /* поднимаем над футером */
-  margin-bottom: -150px; /* “вдавливаем” вниз */
+  margin-bottom: -150px;
 }
 .main__img-anime1,
 .main__img-anime2 {
@@ -303,16 +302,19 @@ body, ul {
   }
   .main__products {
     display: grid;
-    grid-template-columns: repeat(2, 250px);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto auto auto;
     justify-content: space-between;
   }
   .main__product-image {
-    height: 250px;
-    width: 248px;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    max-width: 350px;
     object-fit: cover;
-    margin-bottom: 20px;
+    display: block;
+    margin: 0 auto 20px auto;
   }
+
   .main__img {
     padding-left: 10px;
     padding-top: 70px;
